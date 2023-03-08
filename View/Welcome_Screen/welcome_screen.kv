@@ -1,0 +1,281 @@
+#: kivy 2.0.1
+
+<Welcome_ScreenView>:
+    # Plano de fundo
+    MDFloatLayout: 
+        size_hint: 1, 1
+        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+        FitImage:
+            source: root.model.bg_universe
+    #
+    # Sombras 
+    MDFloatLayout: 
+        size_hint: 1, 1
+        md_bg_color: 0, 0, 0, 0.5
+        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+
+
+
+    #
+    # Layout da tela  
+    MDBoxLayout:
+        size_hint: 1, .5
+        pos_hint: {'center_x': 0.5,'center_y': .75}
+
+    #
+    # Corpo da página
+    MDBoxLayout:
+        size_hint: .95, .5
+        pos_hint: {'center_x': 0.5,'center_y': 0.25 }
+        MDGridLayout:
+            rows: 3 
+            cols: 1        
+            # Breve apresentação
+            MDBoxLayout:
+                size_hint: 1, .4
+                orientation: 'vertical'
+                MDLabel: 
+                    text: 'Student of Control and Automation Engineering at UFSM (Universidade Federal de Santa Maria) in the 11th class. Born in Santiago, a city in the interior of Rio Grande do Sul in Brazil. I am 23 years old and I am passionate about technology and robotics teaching.'
+                    color: 'white'
+                    font_style: 'Overline'  
+                    font_size: 12
+                    bold: True
+                    halign: 'center'  
+                    size_hint: 1, 0.49
+                MDLabel:
+                    text: ''
+                    size_hint: 0.8, .01
+                    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                    md_bg_color: 'lightgreen'
+                MDLabel: 
+                    text: 'Estudante de engenharia de controle e automação pela UFSM pela 11ª turma. Natural de Santiago, uma cidade do interior do RS BR, tenho 23 anos e sou apaixonado por tecnologia e ensino de robotica.'
+                    font_style: 'Overline'
+                    color: 'white'
+                    font_size: 12
+                    halign: 'center'  
+                    size_hint: 1, 0.5
+
+
+            # Tabela de Skills
+            MDBoxLayout:
+                size_hint: 1, .4
+                orientation: 'horizontal'
+                md_bg_color: [ .3, .3, .3, .5 ]
+                radius: 24, 24, 24, 24
+            
+                MDLabel:
+                    text: 'Skills'
+                    color: 'white'
+                    bold: True 
+                    font_size: 32
+                    size_hint: .29, 1 
+                    halign: 'center'
+                MDLabel: 
+                    text:''
+                    size_hint: .01, 0.8
+                    md_bg_color: 'lightgreen'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+
+                MDGridLayout:
+                    cols: 2
+                    padding: 5, 5, 5, 5
+                    MDBoxLayout:
+                        size_hint: .35, .3
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: 'Programming'
+                            color: 'white'
+                            font_size: 18
+                            halign: 'center'
+                            bold: True
+                            size_hint: 1, .7
+                        MDLabel:
+                            text: 'Programação'
+                            color: 'white'
+                            halign: 'center'
+                            font_size: 12
+                            size_hint: 1, .3
+
+                    MDBoxLayout:
+                        size_hint: .35, .3
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: 'Teaching'
+                            color: 'white'
+                            font_size: 18
+                            halign: 'center'
+                            bold: True
+                            size_hint: 1, .7
+                        MDLabel:
+                            text: 'Ensino'
+                            color: 'white'
+                            halign: 'center'
+                            font_size: 12
+                            size_hint: 1, .3
+
+                    MDBoxLayout:
+                        size_hint: .35, .3
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: 'Eletronics'
+                            color: 'white'
+                            font_size: 18
+                            halign: 'center'
+                            bold: True
+                            size_hint: 1, .7
+                        MDLabel:
+                            text: 'Eletronica'
+                            color: 'white'
+                            halign: 'center'
+                            font_size: 12
+                            size_hint: 1, .3
+                    
+                    MDBoxLayout:
+                        size_hint: .35, .3
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: 'Hobbyist'
+                            color: 'white'
+                            font_size: 18
+                            halign: 'center'
+                            bold: True
+                            size_hint: 1, .7
+                        MDLabel:
+                            text: 'Hobista'
+                            color: 'white'
+                            halign: 'center'
+                            font_size: 12
+                            size_hint: 1, .3
+                    
+                    MDBoxLayout:
+                        size_hint: .35, .3
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: '3D Modeling'
+                            color: 'white'
+                            font_size: 18
+                            halign: 'center'
+                            bold: True
+                            size_hint: 1, .7
+                        MDLabel:
+                            text: 'Modelagem 3D'
+                            color: 'white'
+                            halign: 'center'
+                            font_size: 12
+                            size_hint: 1, .3
+                    
+                    MDBoxLayout:
+                        size_hint: .35, .3
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: 'Runner'
+                            color: 'white'
+                            font_size: 18
+                            halign: 'center'
+                            bold: True
+                            size_hint: 1, .7
+                        MDLabel:
+                            text: 'Velocista'
+                            color: 'white'
+                            halign: 'center'
+                            font_size: 12
+                            size_hint: 1, .3
+
+
+            # Botão ver mais
+            MDBoxLayout:
+                size_hint: 1, .15
+                orientation: 'horizontal'
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    size_hint: .5, 1
+                    padding: 0,15,15,15 
+                    MDLabel:
+                        size_hint: .5, .6
+                        text: "To see more!"
+                        font_size: 24
+                        bold: True
+                        color: 'white'
+                        halign: 'center'
+                        valign: 'bottom'
+                        pos_hint: {'center_x': 0.8,'center_y': 0.5}
+                    MDLabel:
+                        size_hint: .5, .4
+                        font_size: 14
+                        text: "Para ver mais"
+                        color: 'white'
+                        halign: 'center'
+                        valign: 'top'
+                        pos_hint: {'center_x': 0.8,'center_y': 0.5}
+                
+                MDBoxLayout:
+                    size_hint: .1, 1
+                    MDBoxLayout:
+                        size_hint: .5, .3
+                        pos_hint: {'center_x': .5,'center_y': 0.5}
+                        MDIconButton:
+                            pos_hint: {'center_x': .5,'center_y': 0.5}
+                            icon: 'arrow-right'
+                            color: 'white'
+                            icon_size: '30sp'
+                            md_bg_color: 'lightgreen'
+                            on_release: root.controller.see_more()
+    #
+    # Layout da foto
+    MDFloatLayout:
+        size_hint: .4, .375
+        pos_hint: {'right': .975,'top': .975}
+        md_bg_color: [ .35, .35, .35, .5 ]
+        radius: 24, 24, 24, 24
+        FitImage: 
+            size_hint: 1, 1
+            source: root.model.my_photo
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+            radius: 24, 24, 24, 24
+    
+    #
+    # Layout do Titulo 
+    MDFloatLayout:
+        size_hint: .75, .3 
+        pos_hint: {'center_x': 0.4,'top': 1}
+        MDLabel:
+            text: "Nice to \nmeet you! I'm"
+            font_style: 'Overline'
+            color: 'white'
+            font_size: 40
+            bold: True
+            valign: 'bottom'
+            size_hint: 1, 0.75
+            pos_hint: {'center_x': 0.5,'center_y': 0.6 }
+        MDLabel:
+            text: 'Prazer em conhecer você! Eu sou'
+            font_style: 'Overline'
+            color: 'white'
+            font_size: 14
+            valign: 'top'
+            size_hint: 1, 0.25
+            pos_hint: {'center_x': 0.5,'center_y': 0.35}
+
+    #
+    # Layout do nome  
+    MDFloatLayout:
+        size_hint: .8, .3 
+        pos_hint: {'center_x': 0.425,'center_y': 0.58 }
+        # Sublinhado
+        MDLabel:
+            text: "           \n             \n                    "
+            color: 'lightgreen'
+            bold: True
+            underline: True
+            font_size: 60
+            size_hint: 1, 0.75
+            pos_hint: {'center_x': 0.6,'center_y': 0.7 }
+        # Nome
+        MDLabel:
+            text: "Bruno \nGabriel \nF. Sampaio"
+            color: 'white'
+            bold: True
+            font_size: 60
+            size_hint: 1, 0.75
+            pos_hint: {'center_x': 0.6,'center_y': 0.69}
+    #
