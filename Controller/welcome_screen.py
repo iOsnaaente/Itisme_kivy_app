@@ -28,4 +28,4 @@ class Welcome_ScreenController:
         print( 'button TELA VEJA MAIS pressed' )
         print( 'bg-universe path from model: ', self.model.bg_universe)
         print( 'my-photo path from model: ', self.model.my_photo)
-        self.view.model_is_changed() 
+        self.view.manager_screens.current = 'about screen'

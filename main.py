@@ -1,5 +1,6 @@
 from kivymd.tools.hotreload.app import MDApp
 from kivymd.uix.screenmanager import MDScreenManager
+from kivymd.uix.transition import MDFadeSlideTransition
 
 import importlib
 import os
@@ -22,7 +23,7 @@ class It_is_me(MDApp):
     def build_app(self) -> MDScreenManager:
         import View.screens
 
-        self.manager_screens = MDScreenManager()
+        self.manager_screens = MDScreenManager( transition = MDFadeSlideTransition())
         Window.bind(on_key_down=self.on_keyboard_down)
         importlib.reload(View.screens)
         screens = View.screens.screens

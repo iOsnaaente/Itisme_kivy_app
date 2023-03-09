@@ -1,5 +1,7 @@
 from View.base_screen import BaseScreenView
-from kivymd.uix.floatlayout import MDFloatLayout 
+from kivymd.uix.screen import MDScreen 
+from kivymd.uix.relativelayout import MDRelativeLayout
+
 
 from kivy.lang import Builder 
 
@@ -7,7 +9,7 @@ import os
 PATH = os.path.dirname( __file__ )
 
 
-class Welcome_ScreenView( BaseScreenView ):
+class Welcome_ScreenView( MDRelativeLayout, BaseScreenView ):
 
     def __init__(self, **kw):
         super().__init__(**kw)
@@ -20,4 +22,3 @@ class Welcome_ScreenView( BaseScreenView ):
         The view in this method tracks these changes and updates the UI
         according to these changes.
         """
-        
